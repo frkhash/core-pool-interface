@@ -31,5 +31,21 @@
         "blockTime": 88,
         "epochLength": 30000,
         "algo": "ubqhash"
+    },
+    "rebirth": {
+        "title": "Expanse Rebirth",
+        "symbol": "EXP",
+        "icon": "exp.svg",
+        "blockTime": 88,
+        "epochLength": 30000,
+        "algo": "frkhash"
+    },
+    "expanse": {
+        "title": "Expanse Mainnet",
+        "symbol": "EXP",
+        "icon": "exp.svg",
+        "blockTime": 88,
+        "epochLength": 30000,
+        "algo": "ethash"
     }
 }
