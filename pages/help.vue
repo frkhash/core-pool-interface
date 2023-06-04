@@ -60,16 +60,30 @@ export default {
     ]
     const supportsMordor = ['lolminer', 'gminer']
 
-    if (network === 'mordor') {
-      for (const miner of supportsMordor) {
-        const doc = await $content(pathPrefix + '/' + miner).fetch()
-        miners.push(doc)
-      }
-    } else {
-      for (const miner of supportsClassic) {
-        const doc = await $content(pathPrefix + '/' + miner).fetch()
-        miners.push(doc)
-      }
+    onst supportsExpanse = ['frkminer', 'srbminer']
+
+    let doc
+
+    switch (network) {
+      case `expanse`:
+        for (const miner of supportsClassic) {
+          const doc = await $content(pathPrefix + '/' + miner).fetch()
+          miners.push(doc)
+        }
+        break
+      case `classic`:
+        for (const miner of supportsClassic) {
+          doc = await $content(pathPrefix + '/' + miner).fetch()
+          miners.push(doc)
+        }
+        break
+      case `mordor`:
+        for (const miner of supportsMordor) {
+          doc = await $content(pathPrefix + '/' + miner).fetch()
+          miners.push(doc)
+        }
+        break
+      default:
     }
 
     // shuffle miners array to avoid an ordering bias

@@ -36,15 +36,15 @@
         "title": "Expanse Rebirth",
         "symbol": "EXP",
         "icon": "exp.svg",
-        "blockTime": 88,
-        "epochLength": 30000,
+        "blockTime": 15,
+        "epochLength": 100000,
         "algo": "frkhash"
     },
     "expanse": {
         "title": "Expanse Mainnet",
         "symbol": "EXP",
         "icon": "exp.svg",
-        "blockTime": 88,
+        "blockTime": 15,
         "epochLength": 30000,
         "algo": "ethash"
     }
