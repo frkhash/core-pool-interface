@@ -60,13 +60,20 @@ export default {
     ]
     const supportsMordor = ['lolminer', 'gminer']
 
-    onst supportsExpanse = ['frkminer', 'srbminer']
+    const supportsExpanse = ['frkminer', 'srbminer']
 
     let doc
 
     switch (network) {
       case `expanse`:
-        for (const miner of supportsClassic) {
+        for (const miner of supportsExpanse) {
+          const doc = await $content(pathPrefix + '/' + miner).fetch()
+          miners.push(doc)
+        }
+        break
+
+      case `rebirth`:
+        for (const miner of supportsExpanse) {
           const doc = await $content(pathPrefix + '/' + miner).fetch()
           miners.push(doc)
         }
